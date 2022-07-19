@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') %>
+</head>
+
+<body class="d-flex flex-column h-100"> 
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Milian receitas</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+          </div>
+        </div>
+      </nav>
+    </header>
+    
+    <!-- Begin page content -->
+    <main class="flex-shrink-0">
+      <div class="container mt-5">
+        
+        <form action="/user" method="post" >
+
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">
+                    Nome da comida
+                </label>
+
+                <textarea class="form-control" name="NomeR" id="exampleFormControlTextarea1" rows="1"></textarea>
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">
+                    Ingredientes
+                </label>
+
+                <textarea class="form-control" name="IngrediR" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">
+                    Modo de preparo
+                </label>
+
+                <textarea class="form-control" name="ModopR" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+    
+      </div>
+    </main>
+    
+    <footer class="footer mt-auto py-3 bg-light">
+      <div class="container">
+        <span class="text-muted"></span>
+      </div>
+    </footer>
+
+    <%- include ('../partials/scripts') %>
+</body>
+</html>
